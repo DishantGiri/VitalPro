@@ -155,12 +155,14 @@ body::before {
 /* ── HERO ── */
 .hero {
     position: relative;
+    height: var(--hero-height); /* FORCES exact 100vh */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: start;
-    overflow: hidden;
-    padding: clamp(1.5rem, 4vh, 4rem) 5vw clamp(2rem, 5vh, 5rem); /* Fluid organic padding */
-    gap: 3rem;
+    align-content: center; /* Perfectly centers the entire grid content vertically */
+    align-items: center; /* Centers items relative to each other */
+    overflow: hidden; 
+    padding: 0 5vw;
+    gap: 2.5rem;
 }
 
 /* Hero background */
@@ -191,7 +193,7 @@ body::before {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* Balance */
     gap: 0;
 }
 
@@ -205,10 +207,8 @@ body::before {
     padding: 0.32rem 1rem;
     font-size: 0.72rem;
     font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
     color: var(--text-muted);
-    margin-bottom: 0.55rem;
+    margin-bottom: 0.45rem;
     width: fit-content;
     opacity: 0;
     animation: fadeUp 0.6s 0.1s ease forwards;
@@ -231,7 +231,7 @@ body::before {
     letter-spacing: 0.02em;
     color: var(--text);
     margin-top: 0;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.6rem;
     white-space: nowrap;
     opacity: 0;
     animation: fadeUp 0.7s 0.25s ease forwards;
@@ -248,7 +248,7 @@ body::before {
     line-height: 1.6;
     color: var(--text-muted);
     max-width: 480px;
-    margin-bottom: 1.1rem;
+    margin-bottom: 0.9rem;
     opacity: 0;
     animation: fadeUp 0.7s 0.4s ease forwards;
 }
@@ -258,8 +258,8 @@ body::before {
     background: var(--bg-soft);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 1rem 1.4rem;
-    margin-bottom: 1.1rem;
+    padding: 0.9rem 1.3rem;
+    margin-bottom: 0.95rem;
     opacity: 0;
     animation: fadeUp 0.7s 0.55s ease forwards;
 }
@@ -416,17 +416,17 @@ body::before {
     z-index: 2;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center; /* PERFECTLY balanced with the left text height! */
     height: 100%;
     padding-top: 0;
 }
 
 .product-wrap {
     position: relative;
-    width: 100%;
-    max-width: clamp(300px, 42vw, 540px); /* Pushed up base sizing limits natively! */
-    aspect-ratio: 3/4;
-    margin: -1rem auto 0;
+    height: 85%; /* Always fits with a tiny buffer */
+    max-height: 720px; 
+    aspect-ratio: 3/4; /* Determines structural width natively */
+    margin: 0 auto;
 }
 
 /* Radial glow blob */
@@ -1542,7 +1542,7 @@ body::before {
 /* ── LARGE SCREEN UPSCALING (e.g. 27-inch monitors, 1440p+) ── */
 @media (min-width: 1440px) and (min-height: 900px) {
     .hero {
-        padding: clamp(3rem, 6vh, 6rem) 5vw clamp(3rem, 6vh, 5rem);
+        /* Remove explicit padding override so it defaults safely */
         gap: 5rem;
     }
     
@@ -1595,10 +1595,7 @@ body::before {
         max-width: 380px;
     }
 
-    /* Significantly upsize the supplement graphic correctly */
-    .product-wrap {
-        max-width: 680px; 
-    }
+    /* Let's strip large screen image wrapper overrides since it scales perfectly natively now based on strict height bounds */
 }
 
 
