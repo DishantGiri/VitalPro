@@ -424,7 +424,7 @@ body::before {
 .product-wrap {
     position: relative;
     width: 100%;
-    max-width: clamp(300px, 35vw, 450px);
+    max-width: clamp(300px, 42vw, 540px); /* Pushed up base sizing limits natively! */
     aspect-ratio: 3/4;
     margin: -1rem auto 0;
 }
@@ -1547,57 +1547,57 @@ body::before {
     }
     
     .hero__title {
-        font-size: clamp(4rem, 6.5vw, 7.5rem);
-        margin-bottom: 1rem;
+        font-size: clamp(5rem, 7.5vw, 9rem);
+        margin-bottom: 1.2rem;
     }
 
     .badge {
-        font-size: 0.85rem;
-        padding: 0.4rem 1.2rem;
-        margin-bottom: 1rem;
+        font-size: 1rem;
+        padding: 0.6rem 1.6rem;
+        margin-bottom: 1.2rem;
     }
 
     .hero__sub {
-        font-size: clamp(1.1rem, 1.3vw, 1.3rem);
-        max-width: 580px;
-        margin-bottom: 1.8rem;
-        line-height: 1.7;
+        font-size: clamp(1.2rem, 1.4vw, 1.45rem);
+        max-width: 650px;
+        margin-bottom: 2.2rem;
+        line-height: 1.8;
     }
 
     .why-box {
-        padding: 1.5rem 2rem;
-        margin-bottom: 1.8rem;
+        padding: 2rem 2.5rem;
+        margin-bottom: 2.2rem;
+        max-width: 650px;
     }
 
     .why-box h2 {
-        font-size: 1.85rem;
-        margin-bottom: 1.2rem;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
     }
 
     .benefits {
         grid-template-columns: 1fr;
-        gap: 0.9rem;
+        gap: 1.1rem;
     }
 
     .benefits li {
-        font-size: 1.05rem;
+        font-size: 1.15rem;
     }
 
     .benefits li svg.icon-check {
-        width: 18px;
-        height: 18px;
+        width: 22px;
+        height: 22px;
     }
 
     .cta-btn {
-        font-size: 1.15rem;
-        padding: 0.9rem 2rem;
-        max-width: 320px;
+        font-size: 1.25rem;
+        padding: 1.1rem 2.5rem;
+        max-width: 380px;
     }
 
-    /* Slightly upsize the supplement graphic */
-    .hero__image-wrap {
-        transform: scale(1.15);
-        transform-origin: center right;
+    /* Significantly upsize the supplement graphic correctly */
+    .product-wrap {
+        max-width: 680px; 
     }
 }
 
