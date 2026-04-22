@@ -160,8 +160,8 @@ body::before {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     overflow: hidden;
-    padding: 0 5vw 1rem;
-    gap: 3rem;
+    padding: 1.5rem 5vw; /* Scaled down for 13" laptop */
+    gap: 2rem;
 }
 
 /* Hero background */
@@ -192,9 +192,8 @@ body::before {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 0;
-    padding-top: 10px;
 }
 
 .badge {
@@ -210,7 +209,7 @@ body::before {
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--text-muted);
-    margin-bottom: 0.55rem;
+    margin-bottom: 0.3rem; /* reduced */
     width: fit-content;
     opacity: 0;
     animation: fadeUp 0.6s 0.1s ease forwards;
@@ -233,7 +232,7 @@ body::before {
     letter-spacing: 0.02em;
     color: var(--text);
     margin-top: 0;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.4rem; /* reduced */
     white-space: nowrap;
     opacity: 0;
     animation: fadeUp 0.7s 0.25s ease forwards;
@@ -245,12 +244,12 @@ body::before {
 }
 
 .hero__sub {
-    font-size: clamp(0.9rem, 1.2vw, 1.08rem);
+    font-size: clamp(0.9rem, 1.1vw, 1.05rem);
     font-weight: 300;
-    line-height: 1.6;
+    line-height: 1.5; /* reduced */
     color: var(--text-muted);
-    max-width: 460px;
-    margin-bottom: 1.1rem;
+    max-width: 480px;
+    margin-bottom: 0.75rem; /* reduced */
     opacity: 0;
     animation: fadeUp 0.7s 0.4s ease forwards;
 }
@@ -260,8 +259,8 @@ body::before {
     background: var(--bg-soft);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 1rem 1.4rem;
-    margin-bottom: 1.1rem;
+    padding: 0.8rem 1.2rem; /* reduced */
+    margin-bottom: 0.75rem; /* reduced */
     opacity: 0;
     animation: fadeUp 0.7s 0.55s ease forwards;
 }
@@ -1452,5 +1451,91 @@ body::before {
     .works-section__inner {
         grid-template-columns: 1fr;
         gap: 3rem;
+    }
+}
+
+/*  MOBILE NAVBAR  */
+.navbar__toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 101;
+    padding: 0;
+}
+
+.hamburger-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--text);
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger-line:nth-child(1) { top: 0; }
+.hamburger-line:nth-child(2) { top: 9px; }
+.hamburger-line:nth-child(3) { top: 18px; }
+
+/* Hamburger Active State */
+.navbar__toggle[aria-expanded="true"] .hamburger-line:nth-child(1) {
+    top: 9px;
+    transform: rotate(45deg);
+}
+.navbar__toggle[aria-expanded="true"] .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+.navbar__toggle[aria-expanded="true"] .hamburger-line:nth-child(3) {
+    top: 9px;
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+    .navbar__toggle { display: block; }
+    
+    .navbar__links {
+        position: fixed;
+        top: var(--nav-height);
+        left: 0;
+        width: 100%;
+        background: rgba(26, 26, 26, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 0;
+        gap: 2.5rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path 0.4s ease-in-out;
+        pointer-events: none;
+    }
+    
+    .navbar__links.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        pointer-events: auto;
+    }
+    
+    /* Modify hero distribution for mobile */
+    .hero {
+        align-items: center; 
+        grid-template-columns: 1fr;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        min-height: auto; /* Allow natural height on mobile */
+    }
+    
+    .hero::after {
+        display: none; /* remove right bg panel on mobile so text has contrast */
+    }
+    
+    .hero__bg {
+        background: linear-gradient(135deg, #1A1A1A 0%, #1E1E1E 50%, #1C1C1C 100%);
     }
 }
