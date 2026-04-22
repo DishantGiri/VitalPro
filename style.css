@@ -298,14 +298,10 @@ body::before {
 
 .check-list {
     list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 COLUMNS for high-density elegance */
-    gap: 0.75rem 2rem;
+    display: flex;
+    flex-direction: column; /* FORCED single row layout for authoritative flow */
+    gap: 0.75rem;
     max-width: 600px;
-}
-
-@media (max-width: 1200px) or (max-height: 700px) {
-    .check-list { grid-template-columns: 1fr; gap: 0.6rem; }
 }
 
 .check-list li {
@@ -2031,51 +2027,74 @@ body::before {
     .footer { padding: 3rem 5vw; }
 }
 
-/* ── LARGE SCREEN UPSCALING (e.g. 27-inch monitors, 1440p+) ── */
-@media (min-width: 1440px) and (min-height: 900px) {
+/* ── LARGE SCREEN UPSCALING (e.g. 15.7-inch, 27-inch, 1440p+) ── */
+@media (min-width: 1440px) and (min-height: 850px) {
     .hero {
         gap: 6rem;
+        padding-top: 5vh;
     }
     
     .hero__main-title {
-        font-size: clamp(4.5rem, 6.5vw, 6rem);
+        font-size: clamp(4.5rem, 6.5vw, 6.5rem);
         margin-bottom: 2rem;
     }
 
     .hero__badge-pill {
-        font-size: 0.9rem;
-        padding: 0.6rem 1.6rem;
-        margin-bottom: 2.2rem;
+        font-size: 0.95rem;
+        padding: 0.6rem 1.8rem;
+        margin-bottom: 2.5rem;
     }
 
     .hero__lead-text {
-        font-size: 1.5rem;
-        max-width: 650px;
+        font-size: 1.6rem;
+        max-width: 700px;
         margin-bottom: 3.5rem;
-        line-height: 1.7;
+        line-height: 1.6;
     }
 
     .check-list {
-        gap: 1.2rem;
+        gap: 1.4rem;
     }
 
     .check-list li {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     .check-circle {
-        width: 34px;
-        height: 34px;
-    }
-
-    .hero__main-btn {
-        font-size: 1.4rem;
-        padding: 1.4rem 4rem;
+        width: 36px;
+        height: 36px;
     }
     
-    .why-box h2 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
+    .check-circle svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .cta-btn {
+        font-size: 1.5rem;
+        padding: 1.6rem 4.5rem;
+        border-radius: 16px;
+    }
+
+    .product-wrap {
+        height: 75vh; /* Significantly larger product visual on big screens */
+    }
+
+    .chip {
+        padding: 1.2rem 1.8rem;
+    }
+    
+    .chip__val {
+        font-size: 1.35rem;
+    }
+
+    .status-dot {
+        width: 12px;
+        height: 12px;
+    }
+
+    .hero__availability {
+        font-size: 1rem;
     }
 }
 
