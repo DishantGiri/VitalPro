@@ -13,3 +13,24 @@ document.querySelectorAll('.cta-btn').forEach(btn => {
     btn.addEventListener('focus', () => btn.classList.add('focused'));
     btn.addEventListener('blur', () => btn.classList.remove('focused'));
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("navbar-toggle");
+    const links = document.getElementById("navbar-links");
+
+    if (toggle && links) {
+        toggle.addEventListener("click", () => {
+            const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+            toggle.setAttribute("aria-expanded", !isExpanded);
+            links.classList.toggle("active");
+        });
+
+        // Close menu when a link is clicked
+        const navLinks = links.querySelectorAll("a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                toggle.setAttribute("aria-expanded", "false");
+                links.classList.remove("active");
+            });
+        });
+    }
+});

@@ -26,7 +26,15 @@
         <a href="#" class="navbar__brand">
             <em>Vital</em>Pro
         </a>
-        <ul class="navbar__links">
+        
+        <!-- Mobile Hamburger Toggle -->
+        <button class="navbar__toggle" aria-label="Toggle Menu" aria-expanded="false" id="navbar-toggle">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <ul class="navbar__links" id="navbar-links">
             <li><a href="#benefits">Benefits</a></li>
             <li><a href="#guarantee">Guarantee</a></li>
             <li><a href="#order" class="navbar__buy">Buy Now</a></li>
@@ -551,35 +559,40 @@
 
     <!-- HOW IT WORKS SECTION -->
     <section class="works-section" aria-label="How VitalPro Works">
-        
+
         <div class="works-section__header">
             <p class="works-section__tag">Mechanism of Action</p>
             <h2 class="works-section__title">How VitalPro Works</h2>
             <p class="works-section__lead">
-                The VitalPro capsules combine key nutrients and plant-based compounds to support the body's natural energy, circulation, and stamina systems. Instead of creating forced effects, it focuses on improving the internal conditions needed for steady daily performance and vitality support.
+                The VitalPro capsules combine key nutrients and plant-based compounds to support the body's natural
+                energy, circulation, and stamina systems. Instead of creating forced effects, it focuses on improving
+                the internal conditions needed for steady daily performance and vitality support.
             </p>
         </div>
 
         <div class="works-section__inner">
-            
+
             <!-- Left: Image and Idea callout -->
             <div class="works-section__media">
-                <img src="public/how-it-works.webp" alt="vitalpro ingredients mechanism circulation energy">
-                <!-- <img src="your-image.webp" alt="vitalpro ingredients mechanism circulation energy" class="works-section__img"> -->
+
+                <img src="public/how-it-works.webp" alt="vitalpro ingredients mechanism circulation energy"
+                    class="works-section__img">
 
                 <div class="works-section__idea">
-                    <p>👉 The idea behind VitalPro is simple: support your body's natural systems rather than forcing quick results.</p>
+                    <p>👉 The idea behind VitalPro is simple: support your body's natural systems rather than forcing
+                        quick results.</p>
                 </div>
             </div>
 
             <!-- Right: 4 Stacked mechanism cards + Conversion trigger -->
             <div class="works-section__mechanisms">
-                
+
                 <div class="mechanism-card">
                     <div class="mechanism-card__number">01</div>
                     <div class="mechanism-card__content">
                         <h3 class="mechanism-card__title">Energy Support <span>(Vitamin B3 / Niacin)</span></h3>
-                        <p class="mechanism-card__text">Helps support normal energy production and overall blood flow.</p>
+                        <p class="mechanism-card__text">Helps support normal energy production and overall blood flow.
+                        </p>
                     </div>
                 </div>
 
