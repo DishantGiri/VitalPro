@@ -618,7 +618,54 @@ body::before {
 }
 
 /* ── MOBILE (< 900px) ── */
+/* --- FLOATING MOBILE CTA --- */
+.floating-cta {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, #FFF 0%, #E0E0E0 100%);
+    color: #000;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.floating-cta.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+    animation: cta-pulse 2s infinite;
+}
+
+@keyframes cta-pulse {
+    0% { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 0 0px rgba(255, 255, 255, 0.3); }
+    70% { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 0 0px rgba(255, 255, 255, 0); }
+}
+
+.floating-cta svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2.5;
+}
+
 @media (max-width: 900px) {
+    .floating-cta {
+        display: flex;
+    }
     :root {
         --section-px: 1.25rem;
     }

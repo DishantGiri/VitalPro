@@ -33,4 +33,23 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    // Floating CTA visibility based on Hero section scroll
+    const hero = document.querySelector('.hero') || document.querySelector('.legal-hero');
+    const floatingCta = document.getElementById('floating-cta');
+    
+    if (hero && floatingCta) {
+        const ctaObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // If hero is NOT intersecting (scrolled past), show button
+                if (!entry.isIntersecting) {
+                    floatingCta.classList.add('visible');
+                } else {
+                    floatingCta.classList.remove('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        ctaObserver.observe(hero);
+    }
 });

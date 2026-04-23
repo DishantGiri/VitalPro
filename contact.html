@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Vital Pro - Direct Support</title>
+    <meta name="description" content="Get in touch with Vital Pro. Contact us for general inquiries, customer support, advertising, and media professionals.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .legal-hero {
+            padding: 8rem var(--section-px) 4rem;
+            background: linear-gradient(135deg, #0D0D0D 0%, #1A1A1A 100%);
+            text-align: center;
+        }
+
+        .legal-content {
+            padding: 4rem var(--section-px);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            padding: 2.5rem;
+            border-radius: 20px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-card h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            color: var(--text);
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .contact-card h2 svg {
+            width: 24px;
+            height: 24px;
+            color: var(--text-muted);
+        }
+
+        .contact-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .contact-card .email-link {
+            display: inline-block;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 2px;
+            transition: border-color 0.2s;
+        }
+
+        .contact-card .email-link:hover {
+            border-color: var(--text);
+        }
+
+        .address-box {
+            grid-column: 1 / -1;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 24px;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .address-info {
+            padding: 3rem;
+            border-right: 1px solid var(--border);
+        }
+
+        .address-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-top: 1rem;
+        }
+
+        .address-footer {
+            padding: 3rem;
+            background: rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 4rem;
+            font-size: 0.85rem;
+            transition: transform 0.2s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .address-box {
+                grid-template-columns: 1fr;
+            }
+            .address-info {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+                padding: 2rem;
+            }
+            .address-footer {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar__inner">
+            <a href="index.html" class="navbar__brand">VITAL<em>PRO</em></a>
+            <ul class="navbar__links">
+                <li><a href="index.html#benefits">Benefits</a></li>
+                <li><a href="index.html#ingredients">Ingredients</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a href="index.html#reviews">Reviews</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="http://secureofficialsite.store/buy-vital-pro" class="navbar__buy">Buy Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="legal-hero">
+        <p class="results-section__tag">Direct Support</p>
+        <h1 class="results-section__title" style="font-size: clamp(2.5rem, 6vw, 4rem);">Contact Us</h1>
+        <p class="results-section__lead">If you have questions about VitalPro™, our practices, or your interactions with our site, please don’t hesitate to reach out.</p>
+    </header>
+
+    <main class="legal-content">
+        <div class="contact-grid">
+            <!-- General -->
+            <div class="contact-card">
+                <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> General Inquiries</h2>
+                <p>For general questions or feedback regarding our platform, please reach out via email. We value your input and strive to respond promptly.</p>
+                <a href="mailto:contact@vital-roots.site" class="email-link">contact@vital-roots.site</a>
+            </div>
+
+            <!-- Support -->
+            <div class="contact-card">
+                <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg> Customer Support</h2>
+                <p>If you need assistance with an order, product information, or any other customer service-related inquiries, our support team is ready to help.</p>
+                <a href="mailto:contact@vital-roots.site" class="email-link">contact@vital-roots.site</a>
+            </div>
+
+            <!-- Office -->
+            <div class="address-box">
+                <div class="address-info">
+                    <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Office Address</h2>
+                    <p>Our physical office is conveniently located in Aurora, Colorado. Feel free to reach out via phone during business hours.</p>
+                    <div class="address-text">
+                        <strong>Vital Pro c/o VitalPro</strong><br>
+                        19655 E 35th Drive, Suite 100<br>
+                        Aurora, CO 80011, USA<br>
+                        <span style="display:block; margin-top: 1rem;">Phone: <strong>(959) 224-1595</strong></span>
+                    </div>
+                </div>
+                <div class="address-footer">
+                    <p style="color: var(--text); font-weight: 700; margin-bottom: 1rem;">Business Hours</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Monday – Friday: 9am – 5pm MST<br>Saturday – Sunday: Closed</p>
+                </div>
+            </div>
+
+            <!-- Advertising -->
+            <div class="contact-card">
+                <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg> Advertising & Sales</h2>
+                <p>Interested in advertising or exploring partnership opportunities with VitalPro™? We welcome collaborations that align with our mission.</p>
+                <a href="mailto:contact@vital-roots.site" class="email-link">contact@vital-roots.site</a>
+            </div>
+
+            <!-- Media -->
+            <div class="contact-card">
+                <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg> Media Inquiries</h2>
+                <p>Media professionals seeking information, interviews, or expert insights on VitalPro™ can reach our PR team at any time.</p>
+                <a href="mailto:contact@vital-roots.site" class="email-link">contact@vital-roots.site</a>
+            </div>
+
+            <!-- Careers -->
+            <div class="contact-card">
+                <h2><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> Career & Social</h2>
+                <p>Explore career opportunities with VitalPro™ or connect with us on social media for the latest health tips and community updates.</p>
+                <a href="mailto:careers@vital-roots.site" class="email-link">careers@vital-roots.site</a>
+            </div>
+        </div>
+
+        <section style="border-top: 1px solid var(--border); padding-top: 3rem; text-align: center;">
+            <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 700px; margin: 0 auto 2rem;">We value your interest in VitalPro™ and look forward to assisting you in any way we can. Your health, energy, and well-being are our top priorities, and we are here to support your journey to optimal male vitality.</p>
+            
+            <a href="index.html" class="back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; display: inline-block; vertical-align: middle;">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Return to Site
+            </a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">VITALPRO OFFICIAL™</div>
+            <p class="footer__copyright">© 2024 VitalPro Labs. All rights reserved.</p>
+            <div class="footer__links">
+                <a href="about-us.html">About Us</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-use.html">Terms of Service</a>
+                <a href="return-policy.html">Return Policy</a>
+                <a href="disclosure.html">Disclosure</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING MOBILE CTA -->
+    <a href="http://secureofficialsite.store/buy-vital-pro" class="floating-cta" id="floating-cta" aria-label="Buy VitalPro Now">
+        <span>Buy Now</span>
+    </a>
+
+</body>
+
+</html>
