@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Vital Pro - Empowering Health</title>
+    <meta name="description" content="Learn about Vital Pro, our mission to provide transparent and accessible information about wellness products for men.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-hero {
+            padding: 8rem var(--section-px) 4rem;
+            background: linear-gradient(135deg, #0D0D0D 0%, #1A1A1A 100%);
+            text-align: center;
+        }
+
+        .about-content {
+            padding: 4rem var(--section-px);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-section {
+            margin-bottom: 4rem;
+        }
+
+        .about-section h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .about-section h3 {
+            font-size: 1.5rem;
+            color: var(--text);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .mission-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+        }
+
+        .about-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .about-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+
+        .about-item strong {
+            display: block;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            padding: 3rem;
+            border-radius: 24px;
+            margin-top: 4rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .contact-link:hover {
+            opacity: 0.7;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .back-link svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .about-hero {
+                padding: 6rem var(--section-px) 3rem;
+            }
+            .about-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar__inner">
+            <a href="index.html" class="navbar__brand">VITAL<em>PRO</em></a>
+            <ul class="navbar__links">
+                <li><a href="index.html#benefits">Benefits</a></li>
+                <li><a href="index.html#ingredients">Ingredients</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a href="index.html#reviews">Reviews</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="index.html#order" class="navbar__buy">Buy Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="about-hero">
+        <p class="results-section__tag">Empowering Health</p>
+        <h1 class="results-section__title" style="font-size: clamp(3rem, 8vw, 5rem);">About Vital Pro</h1>
+        <p class="results-section__lead" style="max-width: 700px; margin: 0 auto;">Dedicated to providing clear, accurate, and accessible information about wellness products for men.</p>
+    </header>
+
+    <main class="about-content">
+        <!-- Intro Section -->
+        <section class="about-section">
+            <p>
+                Vital Pro is a dedicated online platform focused on providing clear, accurate, and accessible information about wellness products like VitalPro™. Our goal is to help individuals better understand supplements designed to support male vitality, energy, and overall performance.
+            </p>
+            <p>
+                In today’s fast-paced world, many men experience changes in energy, stamina, and confidence due to lifestyle factors, stress, and natural aging. With so many products available online, it can be difficult to separate trustworthy information from exaggerated claims. That’s where we come in.
+            </p>
+            <p>
+                At Vital Pro, we simplify the process by presenting well-researched, easy-to-understand insights about products like VitalPro™, including their ingredients, intended benefits, and proper usage. We aim to support informed decision-making so you can confidently choose what fits your wellness goals.
+            </p>
+            <p>
+                We are committed to transparency, clarity, and responsible communication. While we promote and provide information about VitalPro™, we are not the manufacturer of the product. Our role is to act as an informational and promotional resource for consumers seeking guidance.
+            </p>
+        </section>
+
+        <!-- Mission -->
+        <section class="about-section mission-box">
+            <h2>Our Mission</h2>
+            <p>Our mission is to provide transparent, easy-to-understand, and responsible information about supplements that support male vitality and wellness.</p>
+            <ul class="about-list">
+                <li class="about-item">
+                    <strong>Help users make informed decisions</strong>
+                </li>
+                <li class="about-item">
+                    <strong>Present supplement information clearly and responsibly</strong>
+                </li>
+                <li class="about-item">
+                    <strong>Promote safe and mindful supplement use</strong>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Who We Are -->
+        <section class="about-section">
+            <h2>Who We Are</h2>
+            <p>Vital Pro is an independent digital platform created by wellness researchers, content specialists, and health-focused writers who recognized the growing need for simplified and reliable supplement information.</p>
+            <p>We are not the official manufacturer of VitalPro™. Instead, we act as a bridge between consumers and product information, helping users understand what the supplement offers and how it works.</p>
+        </section>
+
+        <!-- Origins -->
+        <section class="about-section">
+            <p class="results-section__tag" style="text-align: left;">Origins</p>
+            <h2>Our Founding Story</h2>
+            <p>Vital Pro was created with a simple idea: make supplement information easier to understand and more transparent.</p>
+            <p>As the supplement industry continues to grow, many consumers are left confused by complex ingredient lists, bold claims, and unclear messaging. Our founders saw a need for a platform that breaks down this information into something practical and trustworthy.</p>
+            <p>Starting with a focus on male vitality supplements like VitalPro™, we built a platform that highlights ingredient transparency, benefits, guidelines, and important disclaimers. Over time, we've grown into a trusted resource for individuals looking to better understand wellness products.</p>
+        </section>
+
+        <!-- Approach -->
+        <section class="about-section">
+            <h2>Our Approach</h2>
+            <div class="about-list">
+                <div class="about-item">
+                    <strong>Research:</strong>
+                    We carefully review product details and ingredient profiles to ensure accuracy.
+                </div>
+                <div class="about-item">
+                    <strong>Simplification:</strong>
+                    We turn complex supplement data into clear, easy-to-understand content.
+                </div>
+                <div class="about-item">
+                    <strong>Transparency:</strong>
+                    We clearly state that we are not the manufacturer and do not make medical claims.
+                </div>
+                <div class="about-item">
+                    <strong>Responsibility:</strong>
+                    We encourage users to consult professionals and follow compliant practices.
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Do -->
+        <section class="about-section">
+            <h2>What We Do</h2>
+            <div class="about-list">
+                <div class="about-item">
+                    <strong>In-Depth Information</strong>
+                    We provide detailed breakdowns of supplements like VitalPro™, including vitamins, botanical ingredients, and their intended roles.
+                </div>
+                <div class="about-item">
+                    <strong>Ingredient Insights</strong>
+                    We explain how key components such as herbal extracts and vitamins are commonly used in wellness products.
+                </div>
+                <div class="about-item">
+                    <strong>Usage Guidance</strong>
+                    We share general usage instructions and safety considerations to help users use supplements responsibly.
+                </div>
+                <div class="about-item">
+                    <strong>Wellness Education</strong>
+                    We offer educational content related to energy, circulation, performance, and overall male wellness.
+                </div>
+            </div>
+        </section>
+
+        <!-- Affiliates & Legal -->
+        <section class="about-section mission-box" style="border-style: solid; border-color: rgba(255,215,0,0.2);">
+            <h3>Affiliate Disclosure</h3>
+            <p>Vital Pro is an independent promotional website. Some links on our site may be affiliate links, which means we may earn a commission if you choose to purchase through them. This comes at no additional cost to you. Our content is created for informational purposes only and is not influenced by commissions.</p>
+            
+            <h3 style="margin-top: 2rem;">Important Disclaimer</h3>
+            <p>The information provided on this website is for general informational purposes only and should not be considered medical advice. This product is not intended to diagnose, treat, cure, or prevent any disease. Always consult a qualified healthcare professional before starting any supplement. Individual results may vary.</p>
+        </section>
+
+        <!-- Contact Us -->
+        <section class="about-section contact-card">
+            <h2>Contact Us</h2>
+            <p>If you have questions or need more information, feel free to reach out:</p>
+            <div class="contact-details">
+                <p><strong>Email:</strong> <a href="mailto:contact@vital-roots.site" class="contact-link">contact@vital-roots.site</a></p>
+                <p><strong>Phone:</strong> <span style="color: var(--text);">(959) 224-1595</span></p>
+                <p><strong>Address:</strong><br>
+                c/o VitalPro<br>
+                19655 E 35th Drive, Suite 100<br>
+                Aurora, CO 80011, USA</p>
+            </div>
+            <p style="margin-top: 2rem; font-style: italic;">For product-specific inquiries, you may also contact the official vendor directly.</p>
+        </section>
+
+        <!-- Commitment -->
+        <section class="about-section" style="text-align: center; border-top: 1px solid var(--border); padding-top: 4rem;">
+            <h2>Our Commitment</h2>
+            <p style="max-width: 700px; margin: 0 auto;">
+                At Vital Pro, we are committed to helping you better understand supplements like VitalPro™ so you can make confident, informed decisions about your wellness journey. We aim to provide clarity in a space often filled with confusion, supporting you with straightforward, responsible, and transparent information every step of the way.
+            </p>
+            
+            <a href="index.html" class="back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to VitalPro™ Details
+            </a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">VITALPRO OFFICIAL™</div>
+            <p class="footer__copyright">© 2024 VitalPro Labs. All rights reserved.</p>
+            <div class="footer__links">
+                <a href="about-us.html">About Us</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-use.html">Terms of Service</a>
+                <a href="return-policy.html">Return Policy</a>
+                <a href="disclosure.html">Disclosure</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
