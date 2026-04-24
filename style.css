@@ -32,6 +32,18 @@ body {
     background: var(--bg);
     color: var(--text);
     overflow-x: hidden;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+section {
+    width: 100%;
+    max-width: 100vw;
 }
 
 /* ── SUBTLE NOISE TEXTURE ── */
@@ -2043,7 +2055,7 @@ body::before {
     border-top: 1px solid var(--border);
     padding: 6rem var(--section-px);
     position: relative;
-    overflow: hidden;
+    overflow: visible; /* Changed from hidden to avoid clipping */
 }
 
 .results-section__container {
@@ -2274,7 +2286,7 @@ body::before {
     padding: 6rem var(--section-px);
     border-top: 1px solid var(--border);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .timeline-section__container {
@@ -2402,7 +2414,7 @@ body::before {
     padding: 4rem var(--section-px);
     border-top: 1px solid var(--border);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .order-section__container {
@@ -2606,7 +2618,7 @@ body::before {
     padding: 6rem var(--section-px);
     border-top: 1px solid var(--border);
     position: relative;
-    overflow: hidden;
+    overflow: visible; /* Changed from hidden */
 }
 
 .expert-section__container {
@@ -2759,7 +2771,7 @@ body::before {
     padding: 6rem var(--section-px);
     border-top: 1px solid var(--border);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .cert-section__container {
@@ -2873,7 +2885,7 @@ body::before {
     padding: 6rem var(--section-px);
     border-top: 1px solid var(--border);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .breakdown-section__container {
@@ -3004,7 +3016,7 @@ body::before {
         linear-gradient(135deg, #1A1A1A 0%, #161616 100%);
     border-top: 1px solid var(--border);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .facts-section__container {
@@ -3267,7 +3279,7 @@ body::before {
     background: var(--bg);
     border-top: 1px solid var(--border);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .usage-section__container {
@@ -3482,7 +3494,7 @@ body::before {
     padding: 6rem var(--section-px);
     border-top: 1px solid var(--border);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .faq-section__container {
@@ -3555,7 +3567,7 @@ body::before {
     padding: 6rem var(--section-px);
     background: var(--bg);
     border-top: 1px solid var(--border);
-    overflow: hidden;
+    overflow: visible;
 }
 
 .benefits-section__header {
@@ -3846,7 +3858,7 @@ body::before {
     background: var(--bg);
     border-top: 1px solid var(--border);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .research-section__container {
@@ -4436,8 +4448,9 @@ body::before {
         text-align: center;
     }
 
-    .brand-vibe {
-        justify-content: center;
+    .brand-vibe__pill {
+        padding: 2.5rem 1.5rem;
+        max-width: 100%;
     }
 
     .brand-list {
@@ -4471,7 +4484,7 @@ body::before {
     background: var(--bg);
     border-top: 1px solid var(--border);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .avoid-fake-section__container {
