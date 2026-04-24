@@ -1,0 +1,46 @@
+# ========================================
+# robots.txt — VitalPro Official™
+# https://vitalproofficial.com
+# ========================================
+
+# Allow all compliant crawlers
+User-agent: *
+Allow: /
+
+# Block any admin or sensitive paths (future-proofing)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /*.log$
+Disallow: /*.env$
+
+# Crawl delay (optional, helps with server load)
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://vitalproofficial.com/sitemap.xml
+
+# ========================================
+# Specific bot rules
+# ========================================
+
+# Allow Google's full suite
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /public/
+
+# Allow Bing
+User-agent: Bingbot
+Allow: /
+
+# Block aggressive scrapers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
