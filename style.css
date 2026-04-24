@@ -25,6 +25,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -633,8 +634,8 @@ body::before {
 /* --- FLOATING MOBILE CTA --- */
 .floating-cta {
     position: fixed;
-    bottom: 25px;
-    right: 25px;
+    bottom: 20px;
+    right: 16px;
     z-index: 9999;
     display: none;
     align-items: center;
@@ -653,6 +654,7 @@ body::before {
     pointer-events: none;
     transform: translateY(20px);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    max-width: calc(100vw - 32px);
 }
 
 .floating-cta.visible {
@@ -680,6 +682,10 @@ body::before {
     }
     :root {
         --section-px: 1.25rem;
+    }
+
+    html, body {
+        overflow-x: hidden !important;
     }
 
     .hero {
